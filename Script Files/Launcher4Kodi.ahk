@@ -43,9 +43,7 @@ ProgFiles32() ;get 32 bit program files folder
 ; >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>		 	GLOBAL VARIABLES DECLARATION AND DEFAULT VALUES 	<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
 
-objWMIService := ComObjGet("winmgmts:{impersonationLevel=impersonate}!\\" A_ComputerName "\root\cimv2")
-For objOperatingSystem in objWMIService.ExecQuery("Select * from Win32_OperatingSystem")
-Global OSVersion := 	objOperatingSystem.Version
+Global OSVersion = 6.2
 global AppVersion = 1.1
 
 Global ProgFiles := ProgFiles32() ;Program files path
